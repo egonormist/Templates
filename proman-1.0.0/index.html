@@ -77,20 +77,48 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 py-6 pb-0 pt-lg-0">
                     <h3 class="text-primary mb-3">I'm</h3>
-                    <h1 class="display-3 mb-3">Kate Winslet</h1>
+                    <h1 class="display-3 mb-3">Mark Ochieng</h1>
                     <h2 class="typed-text-output d-inline"></h2>
-                    <div class="typed-text d-none">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
+                    <div class="typed-text d-none">A GearBox Kenya Student, Studying Embeded Systems,  </div>
                     <div class="d-flex align-items-center pt-5">
-                        <a href="" class="btn btn-primary py-3 px-4 me-5">Download CV</a>
-                        <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                            <span></span>
-                        </button>
-                        <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
+                        <!-- Button to trigger the modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal">
+    Open Video
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="videoModalLabel">Academy Preview</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Embed YouTube video here -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // JavaScript to handle setting the YouTube video URL when the modal is shown
+    var videoModal = document.getElementById('videoModal');
+    videoModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget;
+        var videoId = button.getAttribute('data-video-id');
+        var iframe = videoModal.querySelector('iframe');
+        iframe.src = 'https://www.youtube.com/embed/' + videoId;
+    });
+</script>
+
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img class="img-fluid" src="img/profile.png" alt="">
+                   <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="https://avatars.githubusercontent.com/u/156787501?v=4.jpg" alt="Me">
                 </div>
             </div>
         </div>
@@ -126,15 +154,15 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="d-flex align-items-center mb-5">
                         <div class="years flex-shrink-0 text-center me-4">
-                            <h1 class="display-1 mb-0">15</h1>
-                            <h5 class="mb-0">Years</h5>
+                            <h1 class="display-1 mb-0">1</h1>
+                            <h5 class="mb-0"><b>MONTH</b></h5>
                         </div>
-                        <h3 class="lh-base mb-0">of working experience as a web designer & developer</h3>
+                        <h3 class="lh-base mb-0">of studying at Gearbox Academy</h3>
                     </div>
-                    <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Afordable Prices</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>High Quality Product</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>On Time Project Delivery</p>
+                    <p class="mb-4">They offer the best of services to the best of their ability</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Ensured Understanding</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Highly Experienced Tutors</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Everything you need</p>
                     <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -147,15 +175,15 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
-                        <h5 class="border-end pe-3 me-3 mb-0">Happy Clients</h5>
-                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">1234</h2>
+                        <h5 class="border-end pe-3 me-3 mb-0">Part 1 Modules Completed</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">4</h2>
                     </div>
-                    <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam amet diam ipsum clita labore dolor duo clita.</p>
+                    <p class="mb-4">Following the timetable...</p>
                     <div class="d-flex align-items-center mb-3">
                         <h5 class="border-end pe-3 me-3 mb-0">Projects Completed</h5>
-                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">1234</h2>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">15</h2>
                     </div>
-                    <p class="mb-0">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam amet diam ipsum clita labore dolor duo clita.</p>
+                    <p class="mb-0">These projects incorporate everything learnt during the course.</p>
                 </div>
             </div>
         </div>
@@ -169,64 +197,64 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h1 class="display-5 mb-5">Skills & Experience</h1>
-                    <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum clita dolor duo clita sit.</p>
+                    <p class="mb-4">These are the skills anyone can manage to learn in the shortcourse.</p>
                     <h3 class="mb-4">My Skills</h3>
                     <div class="row align-items-center">
                         <div class="col-md-6">
                             <div class="skill mb-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="font-weight-bold">HTML</h6>
-                                    <h6 class="font-weight-bold">95%</h6>
+                                    <h6 class="font-weight-bold">30%</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="skill mb-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="font-weight-bold">CSS</h6>
-                                    <h6 class="font-weight-bold">85%</h6>
+                                    <h6 class="font-weight-bold">20%</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="skill mb-4">
                                 <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">PHP</h6>
-                                    <h6 class="font-weight-bold">90%</h6>
+                                    <h6 class="font-weight-bold">Python/Micropython</h6>
+                                    <h6 class="font-weight-bold">50%</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="skill mb-4">
                                 <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Javascript</h6>
-                                    <h6 class="font-weight-bold">90%</h6>
+                                    <h6 class="font-weight-bold">C++</h6>
+                                    <h6 class="font-weight-bold">5%</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="skill mb-4">
                                 <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Angular JS</h6>
-                                    <h6 class="font-weight-bold">95%</h6>
+                                    <h6 class="font-weight-bold">Wiring skills</h6>
+                                    <h6 class="font-weight-bold">50%</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="skill mb-4">
                                 <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Wordpress</h6>
-                                    <h6 class="font-weight-bold">85%</h6>
+                                    <h6 class="font-weight-bold">Soldering</h6>
+                                    <h6 class="font-weight-bold">5%</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
@@ -311,10 +339,10 @@
         <div class="container">
             <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">My Services</h1>
+                    <h1 class="display-5 mb-0">What I studied At Gearbox Academy</h1>
                 </div>
                 <div class="col-lg-6 text-lg-end">
-                    <a class="btn btn-primary py-3 px-5" href="">Hire Me</a>
+                    <a class="btn btn-primary py-3 px-5" href="https://www.instagram.com/markyearnsb00ty/">Find Me</a>
                 </div>
             </div>
             <div class="row g-4">
@@ -324,50 +352,13 @@
                             <i class="fa fa-crop-alt fa-2x text-dark"></i>
                         </div>
                         <div class="ms-sm-4">
-                            <h4 class="mb-3">Creative Design</h4>
-                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
-                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                            <h4 class="mb-3">Embeded Systems</h4>
+                            <h6 class="mb-3">Requirements <span class="text-primary">Provided at website</span></h6>
+                            <span>In this course, all students design and build microcontroller-based embedded system applications using the new RP2040 microcontroller chip and the RPi Pico microcontroller board - that is manufactured here at Avon Center by Gearbox-Europlacer, as well as the ESP32 RISC-V microcontroller chip from Espressif Systems.</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-code-branch fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
-                            <h4 class="mb-3">Graphic Design</h4>
-                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
-                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-code fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
-                            <h4 class="mb-3">Web Design</h4>
-                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
-                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-laptop-code fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
-                            <h4 class="mb-3">UI/UX Design</h4>
-                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
-                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                
     </div>
     <!-- Service End -->
 
